@@ -43,6 +43,54 @@ nomes_carreiras = {
     for trilha in base["trilhas"]
 }
 
+# Controle da etapa atual da navegação Wizard.
+if "etapa_wizard" not in st.session_state:
+    st.session_state["etapa_wizard"] = 1
+
+# Armazena as afinidades independentemente dos sliders.
+if "afinidades_wizard" not in st.session_state:
+    st.session_state["afinidades_wizard"] = {}
+
+# Armazena o objetivo profissional selecionado.
+if "objetivo_profissional" not in st.session_state:
+    st.session_state["objetivo_profissional"] = None
+
+# Controla a navegação entre as quatro etapas do Wizard.
+def mudar_etapa_wizard(nova_etapa):
+    if 1 <= nova_etapa <= 4:
+        st.session_state["etapa_wizard"] = nova_etapa
+
+
+# Perguntas distribuídas entre as etapas do Wizard.
+PERGUNTAS_WIZARD = {
+    1: (
+        "matematica",
+        "raciocinio_logico",
+    ),
+    2: (
+        "desenvolvimento_backend",
+        "interfaces_ux",
+        "analise_dados_ia",
+        "engenharia_dados",
+        "ciberseguranca",
+        "devops_sre",
+        "cloud_infraestrutura",
+        "desenvolvimento_mobile",
+        "qualidade_testes",
+        "gestao_produtos",
+    ),
+}
+
+# Seleciona as perguntas correspondentes à etapa atual.
+def obter_perguntas_wizard(etapa):
+    identificadores = set(PERGUNTAS_WIZARD.get(etapa, ()))
+
+    return [
+        pergunta
+        for pergunta in base["perguntas"]
+        if pergunta["id"] in identificadores
+    ]
+
 
 # --------------------------------------------------
 # Apresentação
@@ -111,55 +159,101 @@ with st.sidebar:
 
 st.divider()
 
-st.header("1. Questionário de afinidades")
+# Indicador visual de progresso do Wizard.
+etapa_atual = st.session_state["etapa_wizard"]
 
-st.write(
-    "Avalie seu interesse em cada atividade, "
-    "considerando a escala de 1 a 5."
+st.progress(
+    etapa_atual / 4,
+    text=f"Etapa {etapa_atual} de 4"
 )
 
-st.info(
-    "1 = Interesse muito baixo | "
-    "2 = Baixo | 3 = Moderado | "
-    "4 = Alto | 5 = Muito alto"
-)
+if etapa_atual == 1:
+    st.header("1. Perfil pessoal")
+elif etapa_atual == 2:
+    st.header("2. Afinidades técnicas")
 
-with st.form("formulario_afinidades"):
-    respostas = {}
 
-    coluna_esquerda, coluna_direita = st.columns(2)
 
-    for indice, pergunta in enumerate(base["perguntas"]):
-        coluna = (
-            coluna_esquerda
-            if indice % 2 == 0
-            else coluna_direita
-        )
-
-        with coluna:
-            respostas[pergunta["id"]] = st.slider(
-                label=pergunta["texto"],
-                min_value=1,
-                max_value=5,
-                value=3,
-                step=1,
-                key=f"afinidade_{pergunta['id']}",
-            )
-
-    enviar_afinidades = st.form_submit_button(
-        "Analisar meu perfil",
-        type="primary",
-        use_container_width=True,
+# Exibe as instruções de afinidade somente nas etapas 1 e 2.
+if etapa_atual in (1, 2):
+    st.write(
+        "Avalie seu interesse em cada atividade, "
+        "considerando a escala de 1 a 5."
     )
+
+    st.info(
+        "1 = Interesse muito baixo | "
+        "2 = Baixo | 3 = Moderado | "
+        "4 = Alto | 5 = Muito alto"
+    )
+
+
+
+enviar_afinidades = False
+respostas = {}
+
+if etapa_atual in (1, 2):
+    with st.form("formulario_afinidades"):
+        coluna_esquerda, coluna_direita = st.columns(2)
+
+        for indice, pergunta in enumerate(obter_perguntas_wizard(etapa_atual)):
+            coluna = coluna_esquerda if indice % 2 == 0 else coluna_direita
+
+            with coluna:
+                respostas[pergunta["id"]] = st.slider(
+                    label=pergunta["texto"],
+                    min_value=1,
+                    max_value=5,
+                    value=st.session_state["afinidades_wizard"].get(
+                        pergunta["id"], 3
+                    ),
+                    step=1,
+                    key=f"afinidade_{pergunta['id']}",
+                )
+
+        enviar_afinidades = st.form_submit_button(
+            "Avançar para afinidades técnicas"
+            if etapa_atual == 1
+            else "Avançar para objetivos de carreira",
+            type="primary",
+            use_container_width=True,
+        )
 
 
 # --------------------------------------------------
 # Processamento das recomendações
 # --------------------------------------------------
 
+
+
+
 if enviar_afinidades:
+    st.session_state["afinidades_wizard"].update(respostas)
+
+    if etapa_atual == 1:
+        mudar_etapa_wizard(2)
+        st.rerun()
+
+    if etapa_atual == 2:
+        mudar_etapa_wizard(3)
+        st.rerun()
     try:
-        resultado = recomendar_carreiras(respostas)
+        # Verifica se todas as 12 afinidades foram informadas.
+        ids_obrigatorios = {
+            pergunta["id"] for pergunta in base["perguntas"]
+        }
+
+        if not ids_obrigatorios.issubset(
+            st.session_state["afinidades_wizard"]
+        ):
+            raise ValueError(
+                "Responda às 12 perguntas de afinidade antes "
+                "de analisar seu perfil."
+            )
+
+        resultado = recomendar_carreiras(
+            st.session_state["afinidades_wizard"]
+        )
 
     except (ValueError, KeyError) as erro:
         st.error(
@@ -177,22 +271,77 @@ if enviar_afinidades:
 
 resultado = st.session_state.get("resultado_carreiras")
 
+# Etapa 3 — Objetivos de carreira.
+if st.session_state["etapa_wizard"] == 3:
+    st.header("3. Objetivos de carreira")
+
+    st.write(
+        "Informe seu principal objetivo profissional "
+        "para personalizar seu plano de desenvolvimento."
+    )
+
+    st.selectbox(
+        "Qual é seu principal objetivo profissional?",
+        options=[
+            "Conquistar minha primeira oportunidade Júnior",
+            "Migrar para outra área de TI",
+            "Desenvolver competências para evoluir profissionalmente",
+        ],
+        placeholder="Selecione seu objetivo profissional",
+        key="objetivo_profissional",
+        persist_state="page",
+    )
+
+    # Conclui a entrevista e gera as recomendações.
+    if st.button(
+        "Gerar minhas recomendações",
+        type="primary",
+        use_container_width=True,
+    ):
+        if st.session_state["objetivo_profissional"] is None:
+            st.warning("Selecione seu objetivo profissional antes de continuar.")
+        else:
+            try:
+                ids_obrigatorios = {
+                    pergunta["id"] for pergunta in base["perguntas"]
+                }
+
+                if not ids_obrigatorios.issubset(
+                    st.session_state["afinidades_wizard"]
+                ):
+                    raise ValueError(
+                        "Responda às 12 perguntas de afinidade antes de continuar."
+                    )
+
+                novo_resultado = recomendar_carreiras(
+                    st.session_state["afinidades_wizard"]
+                )
+
+            except (ValueError, KeyError) as erro:
+                st.error(f"Não foi possível gerar as recomendações: {erro}")
+            else:
+                st.session_state["resultado_carreiras"] = novo_resultado
+                st.session_state.pop("avaliacao_competencias", None)
+                mudar_etapa_wizard(4)
+                st.rerun()
+
 
 # --------------------------------------------------
 # Resultados das recomendações
 # --------------------------------------------------
 
-if resultado is None:
-    st.info(
-        "Preencha o questionário e clique em "
-        "'Analisar meu perfil' para visualizar "
-        "suas recomendações."
-    )
 
+
+if resultado is None or etapa_atual != 4:
+    if etapa_atual == 4:
+        st.info(
+            "Ainda não há recomendações disponíveis. "
+            "Conclua as etapas anteriores para gerar seu resultado."
+        )
 else:
     st.divider()
 
-    st.header("2. Carreiras recomendadas")
+    st.header("4. Resultados — Carreiras recomendadas")
 
     st.write(
         "Confira as três carreiras com maior "
@@ -349,7 +498,7 @@ else:
 
     st.divider()
 
-    st.header("3. Avaliação de competências Júnior")
+    st.header("Avaliação de competências Júnior")
 
     st.write(
         "Selecione uma das carreiras recomendadas "
@@ -416,8 +565,9 @@ else:
             )
 
             roadmap = gerar_roadmap(
-                carreira_selecionada,
-                conhecimentos,
+            carreira_selecionada,
+            conhecimentos,
+            st.session_state.get("objetivo_profissional"),
             )
 
         except (ValueError, KeyError) as erro:
@@ -453,7 +603,7 @@ else:
 
         st.divider()
 
-        st.header("4. Resultado da avaliação")
+        st.header("Resultado da avaliação de competências")
 
         coluna1, coluna2, coluna3 = st.columns(3)
 
@@ -521,7 +671,7 @@ else:
 
         st.divider()
 
-        st.header("5. Roadmap personalizado")
+        st.header("Roadmap personalizado")
 
         if roadmap["etapas"]:
             st.write(
@@ -554,6 +704,53 @@ else:
                 "Nenhuma etapa de estudo foi gerada "
                 "para as competências informadas."
             )
+
+        # Tecnologias recomendadas para a carreira selecionada.
+        recomendacoes = roadmap.get("recomendacoes_complementares", {})
+
+        if recomendacoes.get("tecnologias"):
+            st.subheader("Tecnologias recomendadas")
+
+            for tecnologia in recomendacoes["tecnologias"]:
+                st.write(f"- {tecnologia}")
+
+        # Certificações recomendadas para a carreira selecionada.
+        if recomendacoes.get("certificacoes"):
+            st.subheader("Certificações recomendadas")
+
+            st.caption(
+                "Sugestões de formação e certificação. "
+                "Não são requisitos obrigatórios para iniciar na carreira."
+            )
+
+            for certificacao in recomendacoes["certificacoes"]:
+                st.write(f"- {certificacao}")
+
+        # Projetos recomendados para o portfólio no GitHub.
+        if recomendacoes.get("projetos_github"):
+            st.subheader("Projetos para portfólio no GitHub")
+
+            st.caption(
+                "Sugestões de projetos práticos para demonstrar "
+                "competências e construir um portfólio profissional."
+            )
+
+            for projeto in recomendacoes["projetos_github"]:
+                st.write(f"- {projeto}")
+
+        # Orientações conforme o objetivo profissional do usuário.
+        if roadmap.get("orientacoes_objetivo"):
+            st.subheader("Orientações para seu objetivo profissional")
+
+            st.write(
+                f"**Objetivo selecionado:** "
+                f"{st.session_state.get('objetivo_profissional')}"
+            )
+
+            for orientacao in roadmap["orientacoes_objetivo"]:
+                st.write(f"- {orientacao}")
+
+
 
 
 st.divider()

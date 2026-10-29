@@ -71,6 +71,13 @@ A interface Streamlit foi avaliada manualmente por meio de diferentes cenários.
 | Nenhuma competência informada | Mensagem informativa exibida | Aprovado |
 | Quatro competências atendidas | Nenhuma lacuna identificada | Aprovado |
 | Roadmap com duas lacunas | Etapas 2 e 4 selecionadas | Aprovado |
+| Wizard de quatro etapas | Navegação entre perfil pessoal, afinidades técnicas, objetivos e resultados | Aprovado |
+| Objetivo profissional obrigatório | Aviso apresentado quando nenhuma opção é selecionada | Aprovado |
+| Recomendações complementares | Tecnologias, certificações e projetos GitHub exibidos | Aprovado |
+| Persistência do objetivo profissional | Objetivo Júnior preservado até a geração do roadmap | Aprovado |
+| Orientações personalizadas | Três orientações para a primeira oportunidade Júnior exibidas | Aprovado |
+| Roadmap com lacuna de dois níveis | Etapa de estudo e atividade prática geradas corretamente | Aprovado |
+
 
 Os resultados observados foram coerentes com a lógica definida no motor de inferência.
 
@@ -82,6 +89,13 @@ Durante o desenvolvimento e os testes, foram realizados os seguintes ajustes:
 - Inclusão de indicadores de empate, proximidade e perfil uniforme.
 - Correção da indentação de um bloco condicional na interface.
 - Diferenciação das mensagens para avaliações incompletas e competências atendidas.
+- Implementação da navegação Wizard em quatro etapas: perfil pessoal, afinidades técnicas, objetivos de carreira e resultados.
+- Reorganização da interface Streamlit para apresentar cada etapa separadamente.
+- Ampliação da base JSON com tecnologias, certificações e projetos para portfólio GitHub nas dez carreiras.
+- Integração das recomendações complementares à geração do roadmap personalizado.
+- Implementação de orientações específicas conforme o objetivo profissional selecionado.
+- Ajuste da persistência do objetivo profissional durante a navegação entre as etapas.
+
 
 Esses ajustes foram verificados nos cenários de teste correspondentes.
 
@@ -100,5 +114,5 @@ A interface foi testada manualmente; não foi implementada uma suíte automatiza
 O sistema apresentou funcionamento satisfatório nos cenários avaliados.
 
 Os 18 testes automatizados foram aprovados, as dez personas simuladas produziram os resultados esperados e os principais fluxos da interface Streamlit foram validados manualmente.
-
+A adequação dos requisitos também contemplou a implementação do Wizard de quatro etapas, a ampliação das recomendações para as dez carreiras e a personalização do roadmap conforme o objetivo profissional selecionado. Os testes manuais confirmaram a navegação entre as etapas, a apresentação das tecnologias, certificações e projetos GitHub, além da exibição das orientações personalizadas para a primeira oportunidade Júnior. As alterações preservaram o funcionamento do motor de inferência e os resultados dos 18 testes automatizados existentes.
 Os resultados demonstram consistência funcional dentro dos critérios e cenários definidos para a atividade acadêmica.
