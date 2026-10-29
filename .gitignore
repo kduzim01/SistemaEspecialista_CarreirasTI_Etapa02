@@ -1,0 +1,20 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Arquivos temporarios do Python
+__pycache__/
+*.py[cod]
+
+# Configuracoes locais e credenciais
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Arquivos de testes e cache
+.pytest_cache/
+.coverage
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
