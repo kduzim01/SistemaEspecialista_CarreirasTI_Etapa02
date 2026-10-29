@@ -252,9 +252,27 @@ def analisar_competencias(trilha_id, conhecimentos):
     }
 
 
-def gerar_roadmap(trilha_id, conhecimentos):
+def gerar_roadmap(trilha_id, conhecimentos, objetivo_profissional=None):
     """Seleciona etapas de estudo das competências com lacunas."""
     base = carregar_base_conhecimento()
+    # Orientações personalizadas conforme o objetivo profissional.
+    orientacoes_por_objetivo = {
+        "Conquistar minha primeira oportunidade Júnior": [
+            "Priorizar as competências necessárias para uma vaga Júnior.",
+            "Desenvolver projetos práticos e publicá-los no GitHub com documentação.",
+            "Preparar o portfólio e buscar oportunidades de entrada na carreira.",
+        ],
+        "Migrar para outra área de TI": [
+            "Identificar conhecimentos da experiência anterior que podem ser aproveitados.",
+            "Priorizar as lacunas técnicas da nova carreira.",
+            "Desenvolver projetos que demonstrem competências na área de destino.",
+        ],
+        "Desenvolver competências para evoluir profissionalmente": [
+            "Aprofundar as competências que ainda apresentam lacunas.",
+            "Estudar tecnologias avançadas relacionadas à carreira.",
+            "Considerar certificações e projetos de maior complexidade.",
+        ],
+    }
 
     analise = analisar_competencias(
         trilha_id,
@@ -284,7 +302,6 @@ def gerar_roadmap(trilha_id, conhecimentos):
         })
 
     etapas.sort(key=lambda item: item["ordem"])
-
     return {
         "carreira": trilha_id,
         "etapas": etapas,
@@ -293,4 +310,8 @@ def gerar_roadmap(trilha_id, conhecimentos):
             item["id"]
             for item in analise["nao_avaliadas"]
         ],
+        "recomendacoes_complementares": base["recomendacoes_complementares"][trilha_id],
+        "orientacoes_objetivo": orientacoes_por_objetivo.get(
+            objetivo_profissional, []
+        ),
     }

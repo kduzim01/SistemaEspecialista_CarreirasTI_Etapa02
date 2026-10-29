@@ -23,7 +23,15 @@ O sistema possui finalidade acadêmica e não substitui a orientação profissio
 
 ### Questionário de afinidades
 
-O usuário responde a 12 perguntas relacionadas a diferentes interesses e atividades da área de TI.
+
+O questionário utiliza um Wizard organizado em quatro etapas:
+
+1. **Perfil pessoal:** duas perguntas sobre matemática, estatística e raciocínio lógico.
+2. **Afinidades técnicas:** dez perguntas relacionadas às diferentes áreas de Tecnologia da Informação.
+3. **Objetivos de carreira:** seleção do objetivo profissional, utilizado na personalização do roadmap.
+4. **Resultados:** apresentação das três carreiras mais compatíveis, avaliação de competências Júnior e roadmap personalizado.
+
+Ao todo, o usuário responde a 12 perguntas de afinidade nas duas primeiras etapas.
 
 As respostas utilizam uma escala de 1 a 5:
 
@@ -95,7 +103,20 @@ A partir das competências que apresentam lacunas, o sistema organiza um roteiro
 - Atividade prática.
 - Diferença entre o nível atual e o nível de referência.
 
-As etapas preservam a ordem definida na base de conhecimento. Competências atendidas não geram etapas adicionais.
+
+Além das etapas de estudo baseadas nas lacunas identificadas, o sistema apresenta recomendações complementares para cada uma das dez carreiras, incluindo:
+
+- **Tecnologias recomendadas:** linguagens, ferramentas e plataformas relacionadas à carreira selecionada.
+- **Certificações recomendadas:** sugestões de formação e aprofundamento profissional, sem caráter obrigatório.
+- **Projetos para portfólio no GitHub:** atividades práticas que permitem demonstrar competências técnicas e documentar experiências.
+
+O roadmap também considera o objetivo profissional selecionado na terceira etapa do Wizard, apresentando orientações específicas para:
+
+- Conquistar a primeira oportunidade Júnior.
+- Migrar para outra área de Tecnologia da Informação.
+- Desenvolver competências para evoluir profissionalmente.
+
+As recomendações complementares são apresentadas mesmo quando nenhuma lacuna é identificada. O objetivo profissional personaliza as orientações de desenvolvimento, sem modificar os percentuais de compatibilidade ou o ranking das carreiras.
 
 ## 3. Tecnologias utilizadas
 
@@ -341,6 +362,11 @@ Entre os cenários avaliados estão:
 | Nenhuma competência informada | Mensagem informativa exibida |
 | Competências atendidas | Nenhuma lacuna identificada |
 | Roadmap com duas lacunas | Apenas as etapas necessárias apresentadas |
+| Wizard de quatro etapas | Navegação entre perfil pessoal, afinidades técnicas, objetivos e resultados validada |
+| Objetivo profissional obrigatório | Mensagem de aviso apresentada quando nenhuma opção é selecionada |
+| Recomendações complementares | Tecnologias, certificações e projetos GitHub apresentados corretamente |
+| Persistência do objetivo profissional | Objetivo de primeira oportunidade Júnior preservado até a geração do roadmap |
+| Orientações personalizadas | Três orientações correspondentes ao objetivo Júnior apresentadas no Streamlit |
 
 As dez personas simuladas produziram as carreiras esperadas na primeira posição do ranking.
 

@@ -1126,7 +1126,227 @@
     "ordem": 4,
     "conteudo": "Estudar indicadores de produto, métricas de uso, retenção e experiência do usuário.",
     "pratica": "Definir indicadores e montar um relatório de acompanhamento de desempenho de um produto."
+
   }
 ]
+},
+"recomendacoes_complementares": {
+  "backend": {
+    "tecnologias": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Git e GitHub",
+      "Pytest",
+      "Docker"
+    ],
+    "certificacoes": [
+      "GitHub Foundations — fundamentos de Git, repositórios e colaboração",
+      "AWS Certified Developer - Associate — desenvolvimento em nuvem (aprofundamento futuro)"
+    ],
+    "projetos_github": [
+      "API REST de gerenciamento de tarefas com operações CRUD, FastAPI e PostgreSQL",
+      "Sistema de cadastro de usuários com autenticação, testes automatizados e documentação README",
+      "Publicar os projetos no GitHub com histórico de commits, instruções de execução e exemplos de uso"
+    ]
+  },
+  "frontend": {
+    "tecnologias": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "freeCodeCamp — Responsive Web Design Certification",
+      "Meta Front-End Developer Professional Certificate — formação complementar opcional"
+    ],
+    "projetos_github": [
+      "Desenvolver uma página web responsiva utilizando HTML, CSS e JavaScript, considerando acessibilidade.",
+      "Construir uma aplicação React que consuma uma API pública, com filtros e tratamento de erros.",
+      "Publicar os projetos no GitHub com README, capturas de tela e instruções de execução."
+
+    ]
+  },
+  "ciencia_dados": {
+    "tecnologias": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Jupyter Notebook",
+      "SQL",
+      "Matplotlib",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "IBM Data Science Professional Certificate — fundamentos de ciência de dados e Python",
+      "Google Advanced Data Analytics Professional Certificate — estatística e aprendizado de máquina (aprofundamento futuro)"
+    ],
+    "projetos_github": [
+      "Realizar uma análise exploratória de dados públicos utilizando Pandas, NumPy e Matplotlib, documentando os resultados.",
+      "Desenvolver um modelo preditivo com Scikit-learn, incluindo preparação dos dados, treinamento e avaliação de desempenho.",
+      "Publicar os notebooks e projetos no GitHub com README, fontes dos dados, métricas e instruções para reprodução dos experimentos."
+
+    ]
+  },
+  "engenharia_dados": {
+    "tecnologias": [
+      "Python",
+      "SQL",
+      "PostgreSQL",
+      "Apache Airflow",
+      "Apache Spark",
+      "dbt",
+      "Docker",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "Databricks Certified Data Engineer Associate — fundamentos de engenharia e processamento de dados",
+      "Google Cloud Professional Data Engineer — engenharia de dados em nuvem (aprofundamento futuro)"
+    ],
+    "projetos_github": [
+      "Desenvolver um pipeline ETL com Python para extrair dados de uma API, transformá-los e armazená-los no PostgreSQL.",
+      "Construir um fluxo de processamento de dados com Apache Airflow, incluindo agendamento, validação e tratamento de falhas.",
+      "Publicar os projetos no GitHub com README, diagrama da arquitetura, instruções de execução e documentação das transformações."
+
+    ]
+  },
+  "ciberseguranca": {
+    "tecnologias": [
+      "Linux",
+      "Python",
+      "Wireshark",
+      "Nmap",
+      "OWASP ZAP",
+      "Wazuh",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "ISC2 Certified in Cybersecurity (CC) — fundamentos de segurança e proteção de sistemas",
+      "CompTIA Security+ — segurança de redes, ameaças e gerenciamento de riscos (aprofundamento futuro)"
+    ],
+    "projetos_github": [
+      "Criar um laboratório local de segurança de redes para analisar tráfego com Wireshark e documentar os resultados.",
+      "Desenvolver um script Python para analisar arquivos de log e identificar tentativas suspeitas de autenticação.",
+      "Publicar no GitHub relatórios de análise, scripts defensivos e documentação dos experimentos realizados em ambientes próprios ou autorizados."
+
+    ]
+  },
+  "devops": {
+    "tecnologias": [
+      "Linux",
+      "Python",
+      "Bash",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "Terraform",
+      "Prometheus",
+      "Grafana",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "Linux Foundation Certified System Administrator (LFCS) — administração de sistemas Linux",
+      "Certified Kubernetes Administrator (CKA) — administração de clusters Kubernetes (aprofundamento futuro)"
+    ],
+    "projetos_github": [
+      "Criar um pipeline de integração e entrega contínua (CI/CD) com GitHub Actions para executar testes automatizados.",
+      "Containerizar uma aplicação com Docker e automatizar sua execução utilizando Docker Compose.",
+      "Desenvolver um ambiente de monitoramento com Prometheus e Grafana, documentando métricas, alertas e procedimentos de recuperação no GitHub."
+
+    ]
+  },
+  "cloud": {
+    "tecnologias": [
+      "AWS",
+      "Microsoft Azure",
+      "Linux",
+      "Docker",
+      "Terraform",
+      "Python",
+      "Git e GitHub",
+      "Redes e segurança em nuvem"
+    ],
+    "certificacoes": [
+      "AWS Certified Cloud Practitioner — fundamentos de computação em nuvem e serviços AWS",
+      "Microsoft Certified: Azure Fundamentals (AZ-900) — conceitos de nuvem e serviços Azure"
+    ],
+    "projetos_github": [
+      "Desenvolver uma aplicação web simples e documentar sua implantação em um ambiente de nuvem, incluindo configurações básicas de segurança.",
+      "Criar um projeto de infraestrutura como código com Terraform, documentando recursos, variáveis e procedimentos de implantação.",
+      "Publicar no GitHub um projeto demonstrando armazenamento em nuvem, controle de acesso e monitoramento, com README e diagrama da arquitetura, sem expor credenciais."
+
+    ]
+  },
+  "mobile": {
+    "tecnologias": [
+      "Kotlin",
+      "Android Studio",
+      "Jetpack Compose",
+      "JavaScript",
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "Firebase",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "Meta Android Developer Professional Certificate — desenvolvimento Android com Kotlin e Android Studio",
+      "Meta React Native Specialization — desenvolvimento de aplicativos multiplataforma (formação complementar opcional)"
+    ],
+    "projetos_github": [
+      "Desenvolver um aplicativo Android de gerenciamento de tarefas com Kotlin e Jetpack Compose, incluindo navegação e armazenamento local.",
+      "Construir um aplicativo multiplataforma com React Native e Expo, consumindo uma API REST e apresentando tratamento de erros.",
+      "Publicar os aplicativos no GitHub com README, capturas de tela, instruções de execução e documentação das funcionalidades."
+
+    ]
+  },
+  "qa": {
+    "tecnologias": [
+      "JavaScript",
+      "TypeScript",
+      "Playwright",
+      "Cypress",
+      "Postman",
+      "Pytest",
+      "GitHub Actions",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "ISTQB Certified Tester Foundation Level (CTFL) — fundamentos de testes de software",
+      "ISTQB Certified Tester Advanced Level Test Automation Engineering (CTAL-TAE) — automação de testes (aprofundamento futuro)"
+    ],
+    "projetos_github": [
+      "Desenvolver uma suíte de testes automatizados com Playwright para validar login, cadastro e funcionalidades de uma aplicação web.",
+      "Construir uma coleção de testes de API utilizando Postman, verificando respostas HTTP, dados retornados e cenários de erro.",
+      "Publicar um projeto de automação no GitHub utilizando Page Object Model (POM), relatórios de execução, README e integração contínua com GitHub Actions."
+
+    ]
+  },
+  "gestao_produtos": {
+    "tecnologias": [
+      "Jira",
+      "Trello",
+      "Notion",
+      "Figma",
+      "Google Analytics",
+      "SQL básico",
+      "Scrum",
+      "Kanban",
+      "Git e GitHub"
+    ],
+    "certificacoes": [
+      "IBM Product Manager Professional Certificate — fundamentos de gestão e desenvolvimento de produtos",
+      "Professional Scrum Product Owner I (PSPO I) — gestão de produtos com Scrum e entrega de valor"
+    ],
+    "projetos_github": [
+      "Elaborar um estudo de caso de produto digital, incluindo identificação do problema, público-alvo, proposta de valor e definição de um MVP.",
+      "Construir um backlog priorizado com histórias de usuário, critérios de aceitação e planejamento de entregas utilizando Jira ou Trello.",
+      "Publicar no GitHub um portfólio de gestão de produtos contendo documentação de requisitos, protótipos, roadmap, indicadores de desempenho e decisões de priorização."
+    ]
+  }
 }
 }
