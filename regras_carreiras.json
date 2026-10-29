@@ -1,0 +1,1132 @@
+{
+  "versao": "1.0",
+  "configuracoes": {
+    "escala_minima": 1,
+    "escala_maxima": 5,
+    "quantidade_recomendacoes": 3,
+    "nivel_referencia": "junior"
+  },
+  "trilhas": [
+    {
+      "id": "backend",
+      "nome": "Desenvolvimento Back-end"
+    },
+    {
+      "id": "frontend",
+      "nome": "Desenvolvimento Front-end e UI/UX"
+    },
+    {
+      "id": "ciencia_dados",
+      "nome": "Ciência de Dados e Machine Learning"
+    },
+    {
+      "id": "engenharia_dados",
+      "nome": "Engenharia de Dados"
+    },
+    {
+      "id": "ciberseguranca",
+      "nome": "Cibersegurança"
+    },
+    {
+      "id": "devops",
+      "nome": "DevOps e SRE"
+    },
+    {
+      "id": "cloud",
+      "nome": "Computação em Nuvem (Cloud Architecture)"
+    },
+    {
+      "id": "mobile",
+      "nome": "Desenvolvimento Mobile"
+    },
+    {
+      "id": "qa",
+      "nome": "Engenharia de Qualidade e Testes"
+    },
+    {
+      "id": "gestao_produtos",
+      "nome": "Gestão de Produtos"
+    }
+  ],
+  "perguntas": [
+  {
+    "id": "matematica",
+    "texto": "Qual é seu grau de afinidade com matemática e estatística?",
+    "tipo": "afinidade",
+    "obrigatoria": true
+  },
+  {
+    "id": "raciocinio_logico",
+    "texto": "Qual é seu grau de afinidade com lógica e resolução de problemas?",
+    "tipo": "afinidade",
+    "obrigatoria": true
+  },
+  {
+    "id": "desenvolvimento_backend",
+    "texto": "Quanto você gosta de desenvolver APIs, sistemas e regras de negócio?",
+    "tipo": "afinidade",
+    "obrigatoria": true
+  },
+  {
+    "id": "interfaces_ux",
+    "texto": "Quanto você gosta de criar interfaces visuais e experiências para usuários?",
+    "tipo": "afinidade",
+    "obrigatoria": true
+  },
+  {
+    "id": "analise_dados_ia",
+    "texto": "Quanto você gosta de analisar dados, identificar padrões e desenvolver modelos de IA?",
+    "tipo": "afinidade",
+    "obrigatoria": true
+  },
+  {
+    "id": "engenharia_dados",
+    "texto": "Quanto você gosta de organizar grandes volumes de dados e construir pipelines de processamento?",
+    "tipo": "afinidade",
+    "obrigatoria": true
+  },{
+  "id": "ciberseguranca",
+  "texto": "Quanto você gosta de identificar vulnerabilidades e proteger sistemas contra ameaças digitais?",
+  "tipo": "afinidade",
+  "obrigatoria": true
+},
+{
+  "id": "devops_sre",
+  "texto": "Quanto você gosta de automatizar processos, configurar pipelines CI/CD e monitorar sistemas?",
+  "tipo": "afinidade",
+  "obrigatoria": true
+},
+{
+  "id": "cloud_infraestrutura",
+  "texto": "Quanto você gosta de projetar infraestruturas em nuvem e trabalhar com serviços escaláveis?",
+  "tipo": "afinidade",
+  "obrigatoria": true
+},
+{
+  "id": "desenvolvimento_mobile",
+  "texto": "Quanto você gosta de desenvolver aplicativos para dispositivos móveis?",
+  "tipo": "afinidade",
+  "obrigatoria": true
+},
+{
+  "id": "qualidade_testes",
+  "texto": "Quanto você gosta de testar aplicações, identificar falhas e automatizar testes de software?",
+  "tipo": "afinidade",
+  "obrigatoria": true
+},
+{
+  "id": "gestao_produtos",
+  "texto": "Quanto você gosta de planejar produtos digitais, definir prioridades e compreender necessidades dos usuários?",
+  "tipo": "afinidade",
+  "obrigatoria": true
+}
+],
+  "pesos_afinidade": {
+  "backend": {
+    "matematica": 2,
+    "raciocinio_logico": 5,
+    "desenvolvimento_backend": 5,
+    "interfaces_ux": 1,
+    "analise_dados_ia": 1,
+    "engenharia_dados": 2,
+    "ciberseguranca": 2,
+    "devops_sre": 3,
+    "cloud_infraestrutura": 3,
+    "desenvolvimento_mobile": 1,
+    "qualidade_testes": 3,
+    "gestao_produtos": 1
+  },
+  "frontend": {
+    "matematica": 1,
+    "raciocinio_logico": 3,
+    "desenvolvimento_backend": 1,
+    "interfaces_ux": 5,
+    "analise_dados_ia": 1,
+    "engenharia_dados": 0,
+    "ciberseguranca": 1,
+    "devops_sre": 1,
+    "cloud_infraestrutura": 1,
+    "desenvolvimento_mobile": 3,
+    "qualidade_testes": 2,
+    "gestao_produtos": 3
+  },
+"ciencia_dados": {
+  "matematica": 5,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 2,
+  "interfaces_ux": 1,
+  "analise_dados_ia": 5,
+  "engenharia_dados": 3,
+  "ciberseguranca": 1,
+  "devops_sre": 1,
+  "cloud_infraestrutura": 2,
+  "desenvolvimento_mobile": 0,
+  "qualidade_testes": 2,
+  "gestao_produtos": 1
+},
+"engenharia_dados": {
+  "matematica": 3,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 4,
+  "interfaces_ux": 0,
+  "analise_dados_ia": 3,
+  "engenharia_dados": 5,
+  "ciberseguranca": 2,
+  "devops_sre": 3,
+  "cloud_infraestrutura": 4,
+  "desenvolvimento_mobile": 0,
+  "qualidade_testes": 2,
+  "gestao_produtos": 1
+},
+"ciberseguranca": {
+  "matematica": 2,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 3,
+  "interfaces_ux": 0,
+  "analise_dados_ia": 1,
+  "engenharia_dados": 2,
+  "ciberseguranca": 5,
+  "devops_sre": 3,
+  "cloud_infraestrutura": 3,
+  "desenvolvimento_mobile": 1,
+  "qualidade_testes": 3,
+  "gestao_produtos": 1
+},
+"devops": {
+  "matematica": 2,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 4,
+  "interfaces_ux": 0,
+  "analise_dados_ia": 1,
+  "engenharia_dados": 3,
+  "ciberseguranca": 3,
+  "devops_sre": 5,
+  "cloud_infraestrutura": 4,
+  "desenvolvimento_mobile": 1,
+  "qualidade_testes": 3,
+  "gestao_produtos": 1
+},
+"cloud": {
+  "matematica": 2,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 3,
+  "interfaces_ux": 0,
+  "analise_dados_ia": 1,
+  "engenharia_dados": 3,
+  "ciberseguranca": 3,
+  "devops_sre": 5,
+  "cloud_infraestrutura": 5,
+  "desenvolvimento_mobile": 1,
+  "qualidade_testes": 2,
+  "gestao_produtos": 1
+},
+"mobile": {
+  "matematica": 1,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 3,
+  "interfaces_ux": 4,
+  "analise_dados_ia": 0,
+  "engenharia_dados": 0,
+  "ciberseguranca": 1,
+  "devops_sre": 2,
+  "cloud_infraestrutura": 2,
+  "desenvolvimento_mobile": 5,
+  "qualidade_testes": 3,
+  "gestao_produtos": 2
+},
+"qa": {
+  "matematica": 1,
+  "raciocinio_logico": 4,
+  "desenvolvimento_backend": 3,
+  "interfaces_ux": 2,
+  "analise_dados_ia": 2,
+  "engenharia_dados": 1,
+  "ciberseguranca": 2,
+  "devops_sre": 3,
+  "cloud_infraestrutura": 1,
+  "desenvolvimento_mobile": 2,
+  "qualidade_testes": 5,
+  "gestao_produtos": 1
+},
+"gestao_produtos": {
+  "matematica": 1,
+  "raciocinio_logico": 3,
+  "desenvolvimento_backend": 2,
+  "interfaces_ux": 4,
+  "analise_dados_ia": 2,
+  "engenharia_dados": 1,
+  "ciberseguranca": 1,
+  "devops_sre": 2,
+  "cloud_infraestrutura": 2,
+  "desenvolvimento_mobile": 2,
+  "qualidade_testes": 3,
+  "gestao_produtos": 5
+}
+},
+"regras": [
+  {
+    "id": "R01",
+    "descricao": "Alta afinidade com desenvolvimento Back-end e raciocínio lógico.",
+    "trilha": "backend",
+    "tipo": "bonificacao",
+    "condicoes": [
+      {
+        "pergunta": "desenvolvimento_backend",
+        "operador": ">=",
+        "valor": 4
+      },
+      {
+        "pergunta": "raciocinio_logico",
+        "operador": ">=",
+        "valor": 4
+      }
+    ],
+    "ajuste_percentual": 5
+  },
+  {
+    "id": "R02",
+    "descricao": "Alta afinidade com Back-end, mas baixa afinidade com raciocínio lógico.",
+    "trilha": "backend",
+    "tipo": "penalidade",
+    "condicoes": [
+      {
+        "pergunta": "desenvolvimento_backend",
+        "operador": ">=",
+        "valor": 4
+      },
+      {
+        "pergunta": "raciocinio_logico",
+        "operador": "<=",
+        "valor": 2
+      }
+    ],
+    "ajuste_percentual": -8
+  },
+  {
+  "id": "R03",
+  "descricao": "Alta afinidade com interfaces e bom interesse em raciocínio lógico.",
+  "trilha": "frontend",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "interfaces_ux",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "raciocinio_logico",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R04",
+  "descricao": "Baixa afinidade com interfaces e alta preferência por desenvolvimento Back-end.",
+  "trilha": "frontend",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "interfaces_ux",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "desenvolvimento_backend",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R05",
+  "descricao": "Alta afinidade com análise de dados, inteligência artificial e matemática.",
+  "trilha": "ciencia_dados",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "analise_dados_ia",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "matematica",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R06",
+  "descricao": "Baixa afinidade com análise de dados e matemática.",
+  "trilha": "ciencia_dados",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "analise_dados_ia",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "matematica",
+      "operador": "<=",
+      "valor": 2
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R07",
+  "descricao": "Alta afinidade com engenharia de dados e raciocínio lógico.",
+  "trilha": "engenharia_dados",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "engenharia_dados",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "raciocinio_logico",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R08",
+  "descricao": "Baixa afinidade com pipelines e maior interesse em análise de dados e IA.",
+  "trilha": "engenharia_dados",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "engenharia_dados",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "analise_dados_ia",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R09",
+  "descricao": "Alta afinidade com segurança digital e raciocínio lógico.",
+  "trilha": "ciberseguranca",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "ciberseguranca",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "raciocinio_logico",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R10",
+  "descricao": "Baixa afinidade com segurança digital e alta preferência por automação e DevOps.",
+  "trilha": "ciberseguranca",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "ciberseguranca",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "devops_sre",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R11",
+  "descricao": "Alta afinidade com automação DevOps e infraestrutura em nuvem.",
+  "trilha": "devops",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "devops_sre",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "cloud_infraestrutura",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R12",
+  "descricao": "Baixa afinidade com automação DevOps e alta preferência por infraestrutura em nuvem.",
+  "trilha": "devops",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "devops_sre",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "cloud_infraestrutura",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R13",
+  "descricao": "Alta afinidade com infraestrutura em nuvem e raciocínio lógico.",
+  "trilha": "cloud",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "cloud_infraestrutura",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "raciocinio_logico",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R14",
+  "descricao": "Baixa afinidade com infraestrutura em nuvem e alta preferência por automação DevOps.",
+  "trilha": "cloud",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "cloud_infraestrutura",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "devops_sre",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R15",
+  "descricao": "Alta afinidade com desenvolvimento Mobile e criação de interfaces.",
+  "trilha": "mobile",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "desenvolvimento_mobile",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "interfaces_ux",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R16",
+  "descricao": "Baixa afinidade com desenvolvimento Mobile e alta preferência por interfaces visuais.",
+  "trilha": "mobile",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "desenvolvimento_mobile",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "interfaces_ux",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R17",
+  "descricao": "Alta afinidade com qualidade de software e raciocínio lógico.",
+  "trilha": "qa",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "qualidade_testes",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "raciocinio_logico",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R18",
+  "descricao": "Baixa afinidade com testes e alta preferência por desenvolvimento Back-end.",
+  "trilha": "qa",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "qualidade_testes",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "desenvolvimento_backend",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+},
+{
+  "id": "R19",
+  "descricao": "Alta afinidade com gestão de produtos e experiência do usuário.",
+  "trilha": "gestao_produtos",
+  "tipo": "bonificacao",
+  "condicoes": [
+    {
+      "pergunta": "gestao_produtos",
+      "operador": ">=",
+      "valor": 4
+    },
+    {
+      "pergunta": "interfaces_ux",
+      "operador": ">=",
+      "valor": 3
+    }
+  ],
+  "ajuste_percentual": 5
+},
+{
+  "id": "R20",
+  "descricao": "Baixa afinidade com gestão de produtos e alta preferência por desenvolvimento Back-end.",
+  "trilha": "gestao_produtos",
+  "tipo": "penalidade",
+  "condicoes": [
+    {
+      "pergunta": "gestao_produtos",
+      "operador": "<=",
+      "valor": 2
+    },
+    {
+      "pergunta": "desenvolvimento_backend",
+      "operador": ">=",
+      "valor": 4
+    }
+  ],
+  "ajuste_percentual": -8
+}
+],
+"competencias_junior": {
+  "backend": [
+    {
+      "id": "logica_programacao",
+      "nome": "Lógica de programação e estruturas de dados",
+      "nivel_requerido": 3
+    },
+    {
+      "id": "desenvolvimento_apis",
+      "nome": "Desenvolvimento de APIs REST e comunicação HTTP",
+      "nivel_requerido": 3
+    },
+    {
+      "id": "banco_dados_sql",
+      "nome": "Fundamentos de bancos de dados relacionais e SQL",
+      "nivel_requerido": 3
+    },
+    {
+      "id": "versionamento_git",
+      "nome": "Controle de versão com Git e GitHub",
+      "nivel_requerido": 2
+    }
+  ],
+  "frontend": [
+  {
+    "id": "html_css",
+    "nome": "Estruturação de páginas com HTML e estilização com CSS",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "javascript_typescript",
+    "nome": "Fundamentos de JavaScript e TypeScript",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "framework_frontend",
+    "nome": "Desenvolvimento de componentes com frameworks como React",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "ux_acessibilidade",
+    "nome": "Princípios de UX, responsividade e acessibilidade web",
+    "nivel_requerido": 2
+  }
+],
+"ciencia_dados": [
+  {
+    "id": "python_analise_dados",
+    "nome": "Programação Python aplicada à análise de dados",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "estatistica_probabilidade",
+    "nome": "Fundamentos de estatística e probabilidade",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "manipulacao_dados",
+    "nome": "Manipulação e visualização de dados com Pandas e Matplotlib",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "machine_learning_basico",
+    "nome": "Fundamentos de Machine Learning e avaliação de modelos",
+    "nivel_requerido": 2
+  }
+],
+"engenharia_dados": [
+  {
+    "id": "sql_avancado",
+    "nome": "Consultas SQL, modelagem relacional e manipulação de dados",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "pipelines_etl",
+    "nome": "Fundamentos de ETL, ELT e construção de pipelines de dados",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "python_engenharia_dados",
+    "nome": "Programação Python aplicada ao processamento e integração de dados",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "fundamentos_data_warehouse",
+    "nome": "Fundamentos de Data Warehouse e armazenamento analítico",
+    "nivel_requerido": 2
+  }
+],
+"ciberseguranca": [
+  {
+    "id": "fundamentos_seguranca",
+    "nome": "Fundamentos de segurança da informação e princípios de proteção de sistemas",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "redes_protocolos",
+    "nome": "Fundamentos de redes de computadores e protocolos TCP/IP",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "seguranca_sistemas",
+    "nome": "Segurança básica em sistemas operacionais Linux e Windows",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "analise_vulnerabilidades",
+    "nome": "Identificação de vulnerabilidades e fundamentos de testes de segurança",
+    "nivel_requerido": 2
+  }
+],
+"devops": [
+  {
+    "id": "linux_administracao",
+    "nome": "Fundamentos de Linux e administração básica de sistemas",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "git_ci_cd",
+    "nome": "Versionamento Git e fundamentos de integração e entrega contínuas (CI/CD)",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "containers_docker",
+    "nome": "Fundamentos de containers e utilização do Docker",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "monitoramento_automacao",
+    "nome": "Fundamentos de automação, monitoramento e observabilidade de aplicações",
+    "nivel_requerido": 2
+  }
+],
+"cloud": [
+  {
+    "id": "fundamentos_cloud",
+    "nome": "Fundamentos de computação em nuvem e modelos de serviços IaaS, PaaS e SaaS",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "servicos_cloud",
+    "nome": "Utilização básica de serviços em nuvem como AWS, Azure ou Google Cloud",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "redes_cloud",
+    "nome": "Fundamentos de redes, segurança e gerenciamento de acessos em nuvem",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "infraestrutura_escalavel",
+    "nome": "Conceitos de escalabilidade, disponibilidade e infraestrutura como código",
+    "nivel_requerido": 2
+  }
+],
+"mobile": [
+  {
+    "id": "logica_mobile",
+    "nome": "Lógica de programação aplicada ao desenvolvimento de aplicativos móveis",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "framework_mobile",
+    "nome": "Desenvolvimento de aplicativos com React Native, Flutter ou tecnologias nativas",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "interfaces_mobile",
+    "nome": "Construção de interfaces responsivas e navegação em aplicativos móveis",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "integracao_apis_mobile",
+    "nome": "Integração de aplicativos móveis com APIs REST e serviços externos",
+    "nivel_requerido": 2
+  }
+],
+"qa": [
+  {
+    "id": "fundamentos_testes",
+    "nome": "Fundamentos de testes de software, casos de teste e critérios de aceitação",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "testes_funcionais",
+    "nome": "Planejamento e execução de testes funcionais, exploratórios e de regressão",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "automacao_testes",
+    "nome": "Fundamentos de automação de testes com ferramentas como Cypress ou Playwright",
+    "nivel_requerido": 2
+  },
+  {
+    "id": "gestao_defeitos",
+    "nome": "Identificação, documentação e acompanhamento de defeitos de software",
+    "nivel_requerido": 3
+  }
+],
+"gestao_produtos": [
+  {
+    "id": "fundamentos_produtos",
+    "nome": "Fundamentos de gestão de produtos digitais e ciclo de vida de produtos",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "metodologias_ageis",
+    "nome": "Fundamentos de metodologias ágeis, Scrum e Kanban",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "gestao_backlog",
+    "nome": "Organização de backlog, histórias de usuário e priorização de funcionalidades",
+    "nivel_requerido": 3
+  },
+  {
+    "id": "metricas_produto",
+    "nome": "Fundamentos de métricas de produto, experiência do usuário e análise de resultados",
+    "nivel_requerido": 2
+  }
+]
+},
+"roadmap_estudos": {
+  "backend": [
+    {
+      "competencia_id": "logica_programacao",
+      "ordem": 1,
+      "conteudo": "Revisar lógica, estruturas condicionais, laços e estruturas de dados.",
+      "pratica": "Desenvolver exercícios de algoritmos e estruturas de dados."
+    },
+    {
+      "competencia_id": "desenvolvimento_apis",
+      "ordem": 2,
+      "conteudo": "Estudar HTTP, métodos REST, requisições e respostas JSON.",
+      "pratica": "Construir uma API REST com operações CRUD."
+    },
+    {
+      "competencia_id": "banco_dados_sql",
+      "ordem": 3,
+      "conteudo": "Estudar modelagem relacional, consultas SQL e relacionamentos.",
+      "pratica": "Integrar a API desenvolvida a um banco de dados relacional."
+    },
+    {
+      "competencia_id": "versionamento_git",
+      "ordem": 4,
+      "conteudo": "Estudar commits, branches, merge e colaboração com Git.",
+      "pratica": "Versionar a API no GitHub utilizando branches e pull requests."
+    }
+  ],
+  "frontend": [
+    {
+      "competencia_id": "html_css",
+      "ordem": 1,
+      "conteudo": "Estudar HTML semântico, CSS, Flexbox e Grid.",
+      "pratica": "Desenvolver uma página responsiva utilizando HTML e CSS."
+    },
+    {
+      "competencia_id": "javascript_typescript",
+      "ordem": 2,
+      "conteudo": "Estudar variáveis, funções, eventos, DOM e tipagem com TypeScript.",
+      "pratica": "Implementar interações dinâmicas em uma página web."
+    },
+    {
+      "competencia_id": "framework_frontend",
+      "ordem": 3,
+      "conteudo": "Estudar componentes, propriedades, estados e eventos com React.",
+      "pratica": "Desenvolver uma aplicação React organizada em componentes."
+    },
+    {
+      "competencia_id": "ux_acessibilidade",
+      "ordem": 4,
+      "conteudo": "Estudar responsividade, acessibilidade e princípios de UX.",
+      "pratica": "Avaliar e aprimorar a acessibilidade da aplicação desenvolvida."
+    }
+  ],
+  "ciencia_dados": [
+    {
+      "competencia_id": "python_analise_dados",
+      "ordem": 1,
+      "conteudo": "Estudar Python, manipulação de arquivos e estruturas de dados.",
+      "pratica": "Criar um script Python para leitura e tratamento de dados."
+    },
+    {
+      "competencia_id": "estatistica_probabilidade",
+      "ordem": 2,
+      "conteudo": "Revisar média, mediana, desvio padrão e probabilidade.",
+      "pratica": "Produzir uma análise estatística descritiva de um conjunto de dados."
+    },
+    {
+      "competencia_id": "manipulacao_dados",
+      "ordem": 3,
+      "conteudo": "Estudar Pandas, limpeza de dados e visualização com Matplotlib.",
+      "pratica": "Construir uma análise exploratória com gráficos e indicadores."
+    },
+    {
+      "competencia_id": "machine_learning_basico",
+      "ordem": 4,
+      "conteudo": "Estudar aprendizado supervisionado, treinamento e avaliação de modelos.",
+      "pratica": "Treinar e avaliar um modelo simples com Scikit-learn."
+    }
+  ],
+  "engenharia_dados": [
+    {
+      "competencia_id": "sql_avancado",
+      "ordem": 1,
+      "conteudo": "Estudar SQL, joins, agregações e modelagem de dados.",
+      "pratica": "Construir consultas para analisar dados de um banco relacional."
+    },
+    {
+      "competencia_id": "pipelines_etl",
+      "ordem": 2,
+      "conteudo": "Estudar extração, transformação e carregamento de dados.",
+      "pratica": "Desenvolver um pipeline ETL simples utilizando Python."
+    },
+    {
+      "competencia_id": "python_engenharia_dados",
+      "ordem": 3,
+      "conteudo": "Estudar integração de fontes, processamento de arquivos e tratamento de erros.",
+      "pratica": "Criar um processo automatizado de integração de dados."
+    },
+    {
+      "competencia_id": "fundamentos_data_warehouse",
+      "ordem": 4,
+      "conteudo": "Estudar armazenamento analítico, modelagem dimensional e Data Warehouse.",
+      "pratica": "Modelar um pequeno esquema analítico com tabelas de fatos e dimensões."
+    }
+  ],
+  "ciberseguranca": [
+  {
+    "competencia_id": "fundamentos_seguranca",
+    "ordem": 1,
+    "conteudo": "Estudar os princípios de confidencialidade, integridade, disponibilidade e segurança da informação.",
+    "pratica": "Elaborar uma análise básica de riscos de segurança em um sistema."
+  },
+  {
+    "competencia_id": "redes_protocolos",
+    "ordem": 2,
+    "conteudo": "Estudar redes de computadores, endereçamento IP, TCP/IP, DNS e HTTP.",
+    "pratica": "Montar um laboratório de redes e analisar o tráfego utilizando Wireshark."
+  },
+  {
+    "competencia_id": "seguranca_sistemas",
+    "ordem": 3,
+    "conteudo": "Estudar permissões, autenticação, gerenciamento de usuários e segurança em Linux e Windows.",
+    "pratica": "Configurar usuários, permissões e políticas básicas de segurança em uma máquina virtual."
+  },
+  {
+    "competencia_id": "analise_vulnerabilidades",
+    "ordem": 4,
+    "conteudo": "Estudar vulnerabilidades comuns, OWASP Top 10 e fundamentos de testes de segurança.",
+    "pratica": "Analisar vulnerabilidades em uma aplicação de laboratório autorizada."
+  }
+],
+"devops": [
+  {
+    "competencia_id": "linux_administracao",
+    "ordem": 1,
+    "conteudo": "Estudar comandos Linux, gerenciamento de arquivos, processos, usuários e serviços.",
+    "pratica": "Configurar um ambiente Linux para executar uma aplicação simples."
+  },
+  {
+    "competencia_id": "git_ci_cd",
+    "ordem": 2,
+    "conteudo": "Estudar Git, branches, integração contínua e entrega contínua.",
+    "pratica": "Criar uma pipeline com GitHub Actions para executar testes automatizados."
+  },
+  {
+    "competencia_id": "containers_docker",
+    "ordem": 3,
+    "conteudo": "Estudar imagens, containers, Dockerfile e Docker Compose.",
+    "pratica": "Containerizar uma aplicação e executar seus serviços com Docker Compose."
+  },
+  {
+    "competencia_id": "monitoramento_automacao",
+    "ordem": 4,
+    "conteudo": "Estudar automação de tarefas, logs, métricas e fundamentos de observabilidade.",
+    "pratica": "Criar uma rotina automatizada de monitoramento e registro de eventos."
+  }
+],
+"cloud": [
+  {
+    "competencia_id": "fundamentos_cloud",
+    "ordem": 1,
+    "conteudo": "Estudar computação em nuvem, virtualização e modelos IaaS, PaaS e SaaS.",
+    "pratica": "Elaborar uma arquitetura simples identificando os modelos de serviços utilizados."
+  },
+  {
+    "competencia_id": "servicos_cloud",
+    "ordem": 2,
+    "conteudo": "Estudar serviços básicos de computação, armazenamento e bancos de dados em provedores de nuvem.",
+    "pratica": "Implantar uma aplicação simples utilizando recursos de laboratório em nuvem."
+  },
+  {
+    "competencia_id": "redes_cloud",
+    "ordem": 3,
+    "conteudo": "Estudar redes virtuais, controle de acesso, grupos de segurança e identidade em nuvem.",
+    "pratica": "Configurar uma rede virtual com regras de acesso restritas em ambiente de laboratório."
+  },
+  {
+    "competencia_id": "infraestrutura_escalavel",
+    "ordem": 4,
+    "conteudo": "Estudar escalabilidade, disponibilidade, balanceamento de carga e infraestrutura como código.",
+    "pratica": "Desenhar uma arquitetura escalável e criar um exemplo básico com Terraform."
+  }
+],
+"mobile": [
+  {
+    "competencia_id": "logica_mobile",
+    "ordem": 1,
+    "conteudo": "Estudar lógica de programação, funções, estruturas de dados e fundamentos de aplicativos móveis.",
+    "pratica": "Desenvolver exercícios de programação voltados ao comportamento de aplicativos."
+  },
+  {
+    "competencia_id": "framework_mobile",
+    "ordem": 2,
+    "conteudo": "Estudar componentes, gerenciamento de estado e desenvolvimento com React Native ou Flutter.",
+    "pratica": "Criar um aplicativo simples com navegação entre telas."
+  },
+  {
+    "competencia_id": "interfaces_mobile",
+    "ordem": 3,
+    "conteudo": "Estudar layouts responsivos, navegação, formulários e experiência do usuário em dispositivos móveis.",
+    "pratica": "Desenvolver uma interface mobile responsiva com formulários e navegação."
+  },
+  {
+    "competencia_id": "integracao_apis_mobile",
+    "ordem": 4,
+    "conteudo": "Estudar requisições HTTP, consumo de APIs REST e tratamento de respostas JSON.",
+    "pratica": "Integrar o aplicativo a uma API REST para consultar e apresentar informações."
+  }
+],
+"qa": [
+  {
+    "competencia_id": "fundamentos_testes",
+    "ordem": 1,
+    "conteudo": "Estudar níveis de teste, técnicas de teste, casos de teste e critérios de aceitação.",
+    "pratica": "Elaborar um plano de testes para uma aplicação web simples."
+  },
+  {
+    "competencia_id": "testes_funcionais",
+    "ordem": 2,
+    "conteudo": "Estudar testes funcionais, exploratórios, regressivos e validação de requisitos.",
+    "pratica": "Executar cenários de teste e registrar os resultados encontrados."
+  },
+  {
+    "competencia_id": "automacao_testes",
+    "ordem": 3,
+    "conteudo": "Estudar fundamentos de automação, seletores, assertions e ferramentas como Playwright.",
+    "pratica": "Automatizar cenários de navegação e validação de formulários com Playwright."
+  },
+  {
+    "competencia_id": "gestao_defeitos",
+    "ordem": 4,
+    "conteudo": "Estudar classificação de defeitos, severidade, prioridade e rastreamento de problemas.",
+    "pratica": "Documentar defeitos identificados utilizando uma ferramenta de acompanhamento."
+  }
+],
+"gestao_produtos": [
+  {
+    "competencia_id": "fundamentos_produtos",
+    "ordem": 1,
+    "conteudo": "Estudar ciclo de vida de produtos, descoberta de necessidades e proposta de valor.",
+    "pratica": "Definir o problema, o público-alvo e a proposta de valor de um produto digital."
+  },
+  {
+    "competencia_id": "metodologias_ageis",
+    "ordem": 2,
+    "conteudo": "Estudar Scrum, Kanban, papéis, cerimônias e planejamento ágil.",
+    "pratica": "Organizar um quadro Kanban para acompanhar a evolução de um projeto."
+  },
+  {
+    "competencia_id": "gestao_backlog",
+    "ordem": 3,
+    "conteudo": "Estudar histórias de usuário, critérios de aceitação e priorização de backlog.",
+    "pratica": "Construir e priorizar um backlog de funcionalidades utilizando Jira ou Trello."
+  },
+  {
+    "competencia_id": "metricas_produto",
+    "ordem": 4,
+    "conteudo": "Estudar indicadores de produto, métricas de uso, retenção e experiência do usuário.",
+    "pratica": "Definir indicadores e montar um relatório de acompanhamento de desempenho de um produto."
+  }
+]
+}
+}
